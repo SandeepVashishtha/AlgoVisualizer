@@ -1,6 +1,22 @@
 .container {
     text-align: center;
     margin-top: 30px;
+    color: var(--text-primary);
+}
+
+.container h1 {
+    color: var(--title-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.container h2, .container h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.container p, .container span, .container label {
+    color: var(--text-primary);
 }
 
 .array-container {
@@ -12,9 +28,18 @@
 
 .array-bar {
     display: inline-block;
-    background-color: dodgerblue;
+    background-color: var(--chart-primary);
     margin: 0 1px;
     width: 20px;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.array-bar.active {
+    background-color: var(--chart-accent);
+}
+
+.array-bar.sorted {
+    background-color: var(--chart-secondary);
 }
 
 .controls {
@@ -25,27 +50,46 @@ button {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
-}
-
-button:disabled {
-    background-color: grey;
-    cursor: not-allowed;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
     border-radius: 14px;
+    background: var(--btn-secondary-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 button:disabled {
-    background-color: grey;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
     cursor: not-allowed;
+    opacity: 0.6;
+    border-color: transparent;
+}
+
+/* Special styling for action buttons */
+.start-sort {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.start-sort:hover:not(:disabled) {
+    background: var(--accent-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 button:last-child {
-    background-color: orange; /* Change color for reset button */
-    border-radius: 10px;
-    color: white;
+    background-color: var(--chart-accent);
+    color: var(--btn-primary-text);
+    font-weight: 600;
+    border: none;
 }

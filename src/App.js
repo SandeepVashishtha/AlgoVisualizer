@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,8 +7,18 @@ import Sorting from './pages/Sorting';
 import Searching from './pages/Searching';
 import DataStructures from './pages/DataStructures';
 import './styles/components.css';
+import './styles/global-dark-theme.css';
 
 const App = () => {
+    useEffect(() => {
+        // Get preferred color scheme from system
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Get saved theme or use system preference
+        const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        // Add class to body for additional styling hooks
+        document.body.className = `theme-${savedTheme}`;
+    }, []);
     return (
         <Router>
             <div className="app-container">

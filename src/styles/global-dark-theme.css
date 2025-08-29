@@ -1,7 +1,91 @@
-/* Global Dark Theme Override */
-/* This file ensures dark theme is applied everywhere */
+/* Light Theme (Default) */
+:root {
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    
+    /* Text Colors */
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-tertiary: #718096;
+    
+    /* Accent Colors */
+    --accent-primary: #3498db;
+    --accent-secondary: #2980b9;
+    
+    /* Search States */
+    --state-checking: #facc15;
+    --state-checking-glow: rgba(250, 204, 21, 0.3);
+    --state-found: #22c55e;
+    --state-found-glow: rgba(34, 197, 94, 0.3);
+    
+    /* UI Elements */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Button Colors */
+    --button-bg: #e2e8f0;
+    --button-hover-bg: #cbd5e0;
+    --button-text: #1a202c;
+    --button-border: rgba(0, 0, 0, 0.1);
+    
+    /* Chart Colors */
+    --chart-primary: #3498db;
+    --chart-secondary: #2980b9;
+    --chart-accent: #e74c3c;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+}
 
-/* Force dark theme on root elements */
+/* Dark Theme */
+[data-theme="dark"] {
+    /* Backgrounds */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #cbd5e0;
+    
+    /* Accent Colors */
+    --accent-primary: #38bdf8;
+    --accent-primary-hover: #0ea5e9;
+    
+    /* Search States */
+    --state-checking: #fbbf24;
+    --state-checking-glow: rgba(251, 191, 36, 0.2);
+    --state-found: #22c55e;
+    --state-found-glow: rgba(34, 197, 94, 0.2);
+    
+    /* Button Colors */
+    --button-bg: rgb(51, 65, 85);
+    --button-hover-bg: rgb(71, 85, 105);
+    --button-text: rgb(226, 232, 240);
+    --accent-secondary: #0284c7;
+    
+    /* UI Elements */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    /* Button Colors */
+    --btn-primary-bg: #60a5fa;
+    --btn-primary-text: #1a202c;
+    --btn-secondary-bg: #4a5568;
+    --btn-secondary-text: #f7fafc;
+    
+    /* Chart Colors */
+    --chart-primary: #60a5fa;
+    --chart-secondary: #3b82f6;
+    --chart-accent: #f87171;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,10 +94,11 @@ html,
 body,
 #root,
 .app-container {
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%) !important;
-    color: #e0e6ed !important;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
     margin: 0 !important;
     padding: 0 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -47,28 +132,28 @@ a {
     color: inherit !important;
 }
 
-/* Ensure all buttons use dark theme */
+/* Ensure all buttons use theme colors */
 button:not(.cta-button):not(.btn) {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #e0e6ed !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: var(--button-bg) !important;
+    color: var(--button-color) !important;
+    border: 1px solid var(--button-border) !important;
 }
 
-/* Input fields dark theme */
+/* Input fields theme */
 input,
 select,
 textarea {
-    background: rgba(255, 255, 255, 0.05) !important;
-    color: #e0e6ed !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: var(--input-bg) !important;
+    color: var(--input-color) !important;
+    border: 1px solid var(--input-border) !important;
 }
 
 /* Link colors */
 a {
-    color: #66ccff !important;
+    color: var(--link-color) !important;
     text-decoration: none;
 }
 
 a:hover {
-    color: #4da6ff !important;
+    color: var(--link-hover-color) !important;
 }

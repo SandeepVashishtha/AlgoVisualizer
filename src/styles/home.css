@@ -1,4 +1,14 @@
 /* Modern Home Page Styles */
+:root {
+    color-scheme: light dark;
+    --light-bg: #ffffff;
+    --light-bg-gradient: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+    --light-text: #000000;
+
+    --dark-bg: #0a0a1a;
+    --dark-bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    --dark-text: #e0e6ed;
+}
 
 .home-container {
     max-width: 1400px;
@@ -22,7 +32,7 @@
     z-index: 2;
 }
 
-.hero-badge {
+.hero-badge .light-theme {
     display: inline-block;
     background: rgba(102, 204, 255, 0.1);
     border: 1px solid rgba(102, 204, 255, 0.3);
@@ -105,8 +115,14 @@
 
 .cta-primary {
     background: linear-gradient(45deg, #66ccff, #4da6ff);
-    color: #1a1a2e;
+    color: #000000;
     box-shadow: 0 8px 25px rgba(102, 204, 255, 0.3);
+    font-weight: 700;
+}
+
+[data-theme="dark"] .cta-primary {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .cta-primary:hover {

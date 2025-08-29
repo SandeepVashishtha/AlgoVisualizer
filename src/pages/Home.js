@@ -17,7 +17,7 @@ export default function Home() {
         const timer = setInterval(() => {
             if (index <= text.length) {
                 setTypedText(text.slice(0, index));
-                index++;
+                index++;    
             } else {
                 clearInterval(timer);
             }
