@@ -1,7 +1,30 @@
-/* Global Dark Theme Override */
-/* This file ensures dark theme is applied everywhere */
+/* Global Theme Variables */
+:root {
+    --background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 50%, #e8edf2 100%);
+    --text-color: #1a202c;
+    --button-bg: rgba(0, 0, 0, 0.05);
+    --button-color: #1a202c;
+    --button-border: rgba(0, 0, 0, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-color: #1a202c;
+    --input-border: rgba(0, 0, 0, 0.1);
+    --link-color: #2563eb;
+    --link-hover-color: #1d4ed8;
+}
 
-/* Force dark theme on root elements */
+[data-theme="dark"] {
+    --background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    --text-color: #ebf5ff;
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-color: #e0e6ed;
+    --button-border: rgba(255, 255, 255, 0.2);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-color: #e0e6ed;
+    --input-border: rgba(255, 255, 255, 0.1);
+    --link-color: #66ccff;
+    --link-hover-color: #4da6ff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,8 +33,8 @@ html,
 body,
 #root,
 .app-container {
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%) !important;
-    color: #e0e6ed !important;
+    background: var(--background) !important;
+    color: var(--text-color) !important;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -47,28 +70,28 @@ a {
     color: inherit !important;
 }
 
-/* Ensure all buttons use dark theme */
+/* Ensure all buttons use theme colors */
 button:not(.cta-button):not(.btn) {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #e0e6ed !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: var(--button-bg) !important;
+    color: var(--button-color) !important;
+    border: 1px solid var(--button-border) !important;
 }
 
-/* Input fields dark theme */
+/* Input fields theme */
 input,
 select,
 textarea {
-    background: rgba(255, 255, 255, 0.05) !important;
-    color: #e0e6ed !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: var(--input-bg) !important;
+    color: var(--input-color) !important;
+    border: 1px solid var(--input-border) !important;
 }
 
 /* Link colors */
 a {
-    color: #66ccff !important;
+    color: var(--link-color) !important;
     text-decoration: none;
 }
 
 a:hover {
-    color: #4da6ff !important;
+    color: var(--link-hover-color) !important;
 }

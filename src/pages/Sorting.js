@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { bubbleSort } from '../algorithms/bubbleSort';
-import { selectionSort } from '../algorithms/selectionSort';
-import { mergeSort } from '../algorithms/mergeSort';
-import { insertionSort } from '../algorithms/insertionSort';
+// import { bubbleSort } from '../algorithms/bubbleSort';
+// import { selectionSort } from '../algorithms/selectionSort';
+// import { mergeSort } from '../algorithms/mergeSort';
+// import { insertionSort } from '../algorithms/insertionSort';
 import '../styles/pages.css';
 
 const Sorting = () => {

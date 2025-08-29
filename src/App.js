@@ -7,6 +7,7 @@ import Sorting from './pages/Sorting';
 import Searching from './pages/Searching';
 import DataStructures from './pages/DataStructures';
 import './styles/components.css';
+import './styles/global-dark-theme.css';
 
 const App = () => {
     return (

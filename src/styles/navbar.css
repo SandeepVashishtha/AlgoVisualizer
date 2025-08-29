@@ -79,6 +79,41 @@ header h1 {
     box-shadow: 0 4px 15px rgba(102, 204, 255, 0.2);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 15px;
+}
+
+.theme-toggle:hover {
+    background: rgba(102, 204, 255, 0.1);
+    transform: scale(1.05);
+    border: 1px solid rgba(102, 204, 255, 0.3);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(30deg);
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;

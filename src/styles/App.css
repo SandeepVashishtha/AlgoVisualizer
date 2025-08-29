@@ -1,7 +1,27 @@
-body {
+:root {
+    color-scheme: light dark;
+    --light-bg: #ffffff;
+    --light-bg-gradient: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+    --light-text: #000000;
+
+    --dark-bg: #0a0a1a;
+    --dark-bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    --dark-text: #e0e6ed;
+}
+body .dark-theme {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
-    color: #e0e6ed;
+    background: var(--dark-bg-gradient);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    min-height: 100vh;
+}
+
+body .light-theme {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-bg-gradient);
+    color: var(--light-text);
     margin: 0;
     padding: 0;
     overflow-y: scroll;
@@ -93,5 +113,5 @@ body {
     margin: 0 2px;
     background-color: #61dafb;
     text-align: center;
-    color: rgb(39, 38, 38);
+    color: rgb(255, 255, 255);
 }
