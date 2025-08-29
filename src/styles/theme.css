@@ -1,0 +1,103 @@
+/* Base theme variables */
+:root {
+    --primary-gradient: linear-gradient(45deg, #66ccff, #4da6ff);
+    --primary-color: #66ccff;
+    --primary-dark: #4da6ff;
+    
+    /* Light theme defaults */
+    --bg-main: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #ffffff 0%, #f0f2f5 50%, #e8edf2 100%);
+    --bg-secondary: rgba(0, 0, 0, 0.02);
+    --text-main: #1a202c;
+    --text-secondary: #4a5568;
+    --border-color: rgba(0, 0, 0, 0.1);
+    
+    /* Component specific */
+    --button-bg: rgba(0, 0, 0, 0.05);
+    --button-text: #1a202c;
+    --button-border: rgba(0, 0, 0, 0.1);
+    --input-bg: #ffffff;
+    --input-text: #1a202c;
+    --input-border: rgba(0, 0, 0, 0.1);
+    --link-color: #2563eb;
+    --link-hover: #1d4ed8;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+    --bg-main: #0a0a1a;
+    --bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.02);
+    --text-main: #ffffff;
+    --text-secondary: #a0aec0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    /* Component specific */
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-text: #ffffff;
+    --button-border: rgba(255, 255, 255, 0.2);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-text: #ffffff;
+    --input-border: rgba(255, 255, 255, 0.1);
+    --link-color: #66ccff;
+    --link-hover: #4da6ff;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+}
+
+p, span, div {
+    color: var(--text-secondary);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Buttons */
+button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-bg);
+    border-color: var(--primary-color);
+}
+
+/* Inputs */
+input, select, textarea {
+    background: var(--input-bg);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    padding: 8px 12px;
+    border-radius: 8px;
+}

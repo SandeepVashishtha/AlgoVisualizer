@@ -1,18 +1,31 @@
-/* Page-specific styles for dark theme consistency */
+/* Page-specific styles with theme support */
 
 /* General page container */
 .page-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--bg-secondary);
+    color: var(--text-main);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    margin: 20px;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     box-shadow: 0 8px 32px rgba(15, 52, 96, 0.2);
     min-height: calc(100vh - 200px);
+}
+
+/* Generic text styles */
+.page-container h1, .page-container h2, .page-container h3 {
+    color: var(--heading-color);
+}
+
+.page-container p, .page-container span, .page-container label {
+    color: var(--text-primary);
+}
+
+.page-container small, .page-container .text-secondary {
+    color: var(--text-secondary);
 }
 
 /* Page titles */
@@ -20,13 +33,25 @@
     font-size: 2.5em;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+[data-theme="light"] .page-title {
     background: linear-gradient(45deg, #66ccff, #4da6ff, #3385ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-align: center;
-    margin-bottom: 30px;
     text-shadow: 0 2px 10px rgba(102, 204, 255, 0.3);
+}
+
+[data-theme="dark"] .page-title {
+    background: linear-gradient(45deg, #60a5fa, #3b82f6, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(96, 165, 250, 0.3);
 }
 
 /* Progress animation for sorting */
@@ -130,7 +155,7 @@
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.2);
-    color: #66ccff;
+    color: #000000;
     border-color: rgba(102, 204, 255, 0.5);
 }
 

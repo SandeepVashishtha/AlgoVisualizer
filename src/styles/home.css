@@ -115,8 +115,14 @@
 
 .cta-primary {
     background: linear-gradient(45deg, #66ccff, #4da6ff);
-    color: #1a1a2e;
+    color: #000000;
     box-shadow: 0 8px 25px rgba(102, 204, 255, 0.3);
+    font-weight: 700;
+}
+
+[data-theme="dark"] .cta-primary {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .cta-primary:hover {

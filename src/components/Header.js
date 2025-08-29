@@ -18,8 +18,10 @@ const Header = () => {
     };
 
     useEffect(() => {
-        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        const theme = isDarkMode ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.body.className = `theme-${theme}`;
+        localStorage.setItem('theme', theme);
     }, [isDarkMode]);
 
     return (
